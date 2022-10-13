@@ -139,7 +139,6 @@ body {
     flex-direction: column;
     background-color: $black;
     height: auto;
-    padding-bottom: 100px;
   }
   &__trap {
     position: absolute;
@@ -179,6 +178,7 @@ body {
     @media (max-width: 830px) {
       background-color: #e73334;
       width: 70%;
+      align-items: center;
     }
   }
 
@@ -213,6 +213,10 @@ body {
     @media (max-width: 1440px) {
       padding: 20px 10px;
     }
+    @media (max-width: 440px) {
+      padding: 6px;
+      font-weight: 500;
+    }
   }
 }
 
@@ -223,6 +227,7 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
+  margin: 50px 0;
   @media (max-width: 830px) {
     flex-direction: column-reverse;
     height: auto;
@@ -241,26 +246,23 @@ body {
     }
   }
   &__image-wrapper {
-    @include adaptiv("margin-right", 200, 50, 0);
+    @include adaptiv("margin-right", 80, 50, 0);
     display: flex;
+    background-color: $white;
+    padding: 60px;
+
     @media (max-width: 830px) {
-      margin: 0;
+      width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0;
     }
 
-    &:after {
-      content: "";
-      width: 100%;
-      height: 80%;
-      background-color: $white;
-      position: absolute;
-      top: 10%;
-      right: 0;
-
-      @media (max-width: 830px) {
-        background-color: $white;
-        width: 70%;
-      }
-    }
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__img {
@@ -276,6 +278,7 @@ body {
     @media (max-width: 830px) {
       background-color: $black;
       width: 70%;
+      border: 4px solid $white;
     }
   }
 
@@ -308,18 +311,30 @@ body {
     @media (max-width: 1440px) {
       padding: 20px 27px;
     }
+    @media (max-width: 440px) {
+      padding: 6px;
+      font-weight: 500;
+    }
   }
 }
 
 .section-gallary {
   @include adaptiv("margin-top", 200, 50, 0);
-
+  @media (max-width: 830px) {
+    height: 85vh;
+    display: flex;
+  }
   &__container {
     max-width: 1550px;
     display: flex;
     margin: 0 auto;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    @media (max-width: 830px) {
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
   }
 
   &__card {
@@ -328,13 +343,26 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+    @media (max-width: 830px) {
+      position: absolute;
+    }
   }
 
   &__img {
     box-shadow: 0px 0px 60px 18px $white;
     border-radius: 26px;
     margin-bottom: 60px;
-    @include adaptiv("width", 300, 199, 0);
+    max-width: 300px;
+    @media (max-width: 830px) {
+      border-radius: 3px;
+      box-shadow: 0px 0px 40px 9px $white;
+    }
+    @media (max-width: 440px) {
+      max-width: 230px;
+    }
+    @media (max-width: 380px) {
+      max-width: 200px;
+    }
   }
 
   &__text {
@@ -350,6 +378,7 @@ body {
   position: relative;
   overflow: hidden;
   padding-bottom: 100px;
+
   @include adaptiv("margin-top", 100, 30, 0);
   &::before {
     content: "";
@@ -360,6 +389,12 @@ body {
   }
   &__img {
     @include adaptiv("width", 1920, 300, 0);
+    @media (max-width: 680px) {
+      filter: blur(10px);
+    }
+    @media (max-width: 420px) {
+      height: 150px;
+    }
   }
 
   &__wrapper {
@@ -376,19 +411,23 @@ body {
     @media (max-width: 1440px) {
       top: 13%;
     }
+    @media (max-width: 830px) {
+      width: 75%;
+      left: 13%;
+    }
   }
   &__title {
     font-weight: 700;
     @include adaptiv("font-size", 36, 11, 0);
     @include adaptiv("line-height", 44, 13, 0);
-    @include adaptiv(" margin-bottom", 60, 20, 0);
+    @include adaptiv(" margin-bottom", 60, 5, 0);
   }
   &__text {
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
-    @include adaptiv("font-size", 30, 9, 0);
-    @include adaptiv("line-height", 36, 10, 0);
+    @include adaptiv("font-size", 30, 10, 0);
+    @include adaptiv("line-height", 36, 12, 0);
   }
 }
 
@@ -399,11 +438,21 @@ body {
 .footer {
   height: 30vh;
   padding: 100px 0;
+  @media (max-width: 830px) {
+    padding-top: 50px;
+  }
   &__contact {
     background-color: $white;
     display: flex;
     padding-right: 100px;
     justify-content: flex-end;
+    @media (max-width: 830px) {
+      justify-content: center;
+      align-items: center;
+      background-color: $black;
+      flex-direction: column;
+      padding: 0;
+    }
   }
 
   &__link {
@@ -414,5 +463,22 @@ body {
     padding: 20px 0;
     @include adaptiv("font-size", 30, 14, 0);
     @include adaptiv("line-height", 36, 16, 0);
+
+    @media (max-width: 830px) {
+      background-color: #fff;
+      margin-right: 0;
+      margin-bottom: 15px;
+      padding: 15px 30px;
+      width: 70%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 7px;
+    }
+  }
+
+  .vk-link {
+    width: auto;
+    padding: 10px;
   }
 }
