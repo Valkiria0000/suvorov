@@ -120,6 +120,13 @@ body {
     box-shadow: 0px 0px 29px 16px #e73334;
     @include adaptiv("font-size", 45, 12, 0);
     @include adaptiv("padding", 34, 12, 0);
+
+    &:hover {
+      background-color: $white;
+      box-shadow: 0px 0px 29px 16px $white;
+      color: #e73334;
+      transition: 0.6s;
+    }
   }
 
   &__crutch {
@@ -201,7 +208,7 @@ body {
     font-weight: 700;
     display: inline-flex;
     justify-content: center;
-    border: 2px solid #ffffff;
+    border: 2px solid $white;
     border-radius: 23px;
     text-decoration: none;
     padding: 30px 90px;
@@ -210,8 +217,15 @@ body {
     align-self: center;
     @include adaptiv("font-size", 32, 11, 0);
     @include adaptiv("line-height", 39, 11, 0);
+
+    &:hover {
+      background-color: $white;
+      color: #e73334;
+      border: 2px solid $white;
+      transition: 0.6s;
+    }
     @media (max-width: 1440px) {
-      padding: 20px 10px;
+      padding: 20px 30px;
     }
     @media (max-width: 440px) {
       padding: 6px;
@@ -303,11 +317,20 @@ body {
     border-radius: 7px;
     text-decoration: none;
     padding: 30px 90px;
-    background-color: #fff;
-    color: #000;
+    background-color: $white;
+    color: $black;
     align-self: end;
+    border: 3px solid $white;
     @include adaptiv("font-size", 32, 13, 0);
     @include adaptiv("line-height", 39, 15, 0);
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+      border: 3px solid $white;
+      transition: 0.6s;
+    }
+
     @media (max-width: 1440px) {
       padding: 20px 27px;
     }
@@ -446,6 +469,7 @@ body {
     display: flex;
     padding-right: 100px;
     justify-content: flex-end;
+    align-items: center; /******************************************************************************/
     @media (max-width: 830px) {
       justify-content: center;
       align-items: center;
