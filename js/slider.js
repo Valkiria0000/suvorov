@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", slider);
+document.addEventListener("load", slider);
 
 function slider() {
   const windowInnerWidth = window.innerWidth;
-  console.log(windowInnerWidth);
+
   if (windowInnerWidth < 830) {
     const staticBlock = document.querySelector(".section-gallary__container");
     const slider = document.querySelector(".swiper");
