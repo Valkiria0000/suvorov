@@ -738,8 +738,8 @@ body {
 .form__btn:hover {
   background-color: #fff;
   color: #e73334;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .is-open {
