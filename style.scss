@@ -1,5 +1,6 @@
 $black: #000;
 $white: #fff;
+$red: #e73334;
 
 $maxWidth: 1920;
 $maxWidthContainer: 1500;
@@ -111,20 +112,20 @@ body {
     font-weight: 700;
     display: inline-flex;
     justify-content: center;
-    background: #e73334;
+    background-color: $red;
     border-radius: 27px;
     color: $white;
     text-decoration: none;
     width: auto;
     z-index: 3;
-    box-shadow: 0px 0px 29px 16px #e73334;
+    box-shadow: 0px 0px 29px 16px $red;
     @include adaptiv("font-size", 45, 12, 0);
     @include adaptiv("padding", 34, 12, 0);
 
     &:hover {
       background-color: $white;
       box-shadow: 0px 0px 29px 16px $white;
-      color: #e73334;
+      color: $red;
       transition: 0.6s;
     }
   }
@@ -154,7 +155,7 @@ body {
     right: 0;
     height: 100vh;
     border-left: 300px solid transparent;
-    border-bottom: 100vh solid #e73334;
+    border-bottom: 100vh solid $red;
     @media (max-width: 830px) {
       display: none;
     }
@@ -166,7 +167,7 @@ body {
       width: 70%;
       display: flex;
       padding: 50px 0;
-      background-color: #fff;
+      background-color: $white;
       align-items: center;
       justify-content: center;
     }
@@ -183,7 +184,7 @@ body {
     flex-direction: column;
     @include adaptiv("padding", 80, 30, 0);
     @media (max-width: 830px) {
-      background-color: #e73334;
+      background-color: $red;
       width: 70%;
       align-items: center;
     }
@@ -220,7 +221,7 @@ body {
 
     &:hover {
       background-color: $white;
-      color: #e73334;
+      color: $red;
       border: 2px solid $white;
       transition: 0.6s;
     }
@@ -407,7 +408,7 @@ body {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: rgba($color: #000000, $alpha: 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
   }
   &__img {
@@ -455,7 +456,7 @@ body {
 }
 
 .is-red {
-  color: #e73334;
+  color: $red;
 }
 
 .footer {
@@ -489,7 +490,7 @@ body {
     @include adaptiv("line-height", 36, 16, 0);
 
     @media (max-width: 830px) {
-      background-color: #fff;
+      background-color: $white;
       margin-right: 0;
       margin-bottom: 15px;
       padding: 15px 30px;
@@ -505,4 +506,110 @@ body {
     width: auto;
     padding: 10px;
   }
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0);
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+  transition: 0.5s;
+  &__body {
+    background-color: $red;
+    min-width: 60%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 50px;
+    transition-delay: 0.2s;
+    border-radius: 21px;
+  }
+  &__btn {
+    width: 30px;
+    height: 30px;
+    background-color: $white;
+    border-radius: 50%;
+    top: -3%;
+    right: -8px;
+    z-index: 5;
+    position: absolute;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 1px;
+      background: $red;
+      top: 48%;
+      left: 24%;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+  &__content {
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(200, 200, 200, 0.9);
+  &__input {
+    width: 80%;
+    background-color: $white;
+    border-radius: 17px;
+    padding: 10px;
+    border: none;
+    margin-bottom: 20px;
+    text-indent: 15px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: $black;
+  }
+
+  &__btn {
+    padding: 8px 20px;
+    border: 3px solid $white;
+    border-radius: 17px;
+    color: $white;
+    width: auto;
+    background-color: $red;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 40px;
+    line-height: 36px;
+    &:hover {
+      background-color: $white;
+      color: $red;
+    }
+  }
+}
+
+.is-open {
+  opacity: 1;
+  z-index: 4;
+
+  transition: 0.5s;
+  transform: scale(1);
 }
