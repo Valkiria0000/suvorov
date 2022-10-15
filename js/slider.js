@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", slider);
+
 function slider() {
   const windowInnerWidth = window.innerWidth;
   console.log(windowInnerWidth);
