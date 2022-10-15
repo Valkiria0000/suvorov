@@ -377,8 +377,9 @@ body {
   -ms-flex-item-align: end;
       align-self: end;
   border: 3px solid #fff;
+  text-align: center;
   font-size: calc( 13px + 19 * ((100vw - 320px) / 1600) );
-  line-height: calc( 15px + 24 * ((100vw - 320px) / 1600) );
+  line-height: calc( 12px + 27 * ((100vw - 320px) / 1600) );
 }
 .section-left__link:hover {
   background-color: #000;
@@ -394,17 +395,22 @@ body {
 }
 @media (max-width: 440px) {
   .section-left__link {
-    padding: 6px;
+    padding: 10px;
     font-weight: 500;
+  }
+}
+@media (max-width: 350px) {
+  .section-left__link {
+    padding: 3px;
   }
 }
 
 .section-gallary {
-  margin-top: calc( 50px + 150 * ((100vw - 320px) / 1600) );
+  margin-top: calc( 30px + 170 * ((100vw - 320px) / 1600) );
 }
 @media (max-width: 830px) {
   .section-gallary {
-    height: 85vh;
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -448,34 +454,12 @@ body {
           align-items: center;
   margin-bottom: 50px;
 }
-@media (max-width: 830px) {
-  .section-gallary__card {
-    position: absolute;
-  }
-}
 .section-gallary__img {
   -webkit-box-shadow: 0px 0px 60px 18px #fff;
           box-shadow: 0px 0px 60px 18px #fff;
   border-radius: 26px;
   margin-bottom: 60px;
   max-width: 300px;
-}
-@media (max-width: 830px) {
-  .section-gallary__img {
-    border-radius: 3px;
-    -webkit-box-shadow: 0px 0px 40px 9px #fff;
-            box-shadow: 0px 0px 40px 9px #fff;
-  }
-}
-@media (max-width: 440px) {
-  .section-gallary__img {
-    max-width: 230px;
-  }
-}
-@media (max-width: 380px) {
-  .section-gallary__img {
-    max-width: 200px;
-  }
 }
 .section-gallary__text {
   font-weight: 500;
@@ -664,7 +648,6 @@ body {
 .popup__body {
   background-color: #e73334;
   min-width: 60%;
-  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -676,10 +659,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  padding: 50px;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
   border-radius: 21px;
+  height: calc( 350px + 150 * ((100vw - 320px) / 1600) );
+  padding: calc( 30px + 20 * ((100vw - 320px) / 1600) );
 }
 .popup__btn {
   width: 30px;
@@ -731,13 +715,12 @@ body {
   border: none;
   margin-bottom: 20px;
   text-indent: 15px;
-  font-style: normal;
   font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
   color: #000;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  font-size: calc( 14px + 11 * ((100vw - 320px) / 1600) );
+  line-height: calc( 16px + 14 * ((100vw - 320px) / 1600) );
 }
 .form__btn {
   padding: 8px 20px;
@@ -748,9 +731,9 @@ body {
   background-color: #e73334;
   cursor: pointer;
   font-weight: 700;
-  font-size: 30px;
   margin-top: 40px;
-  line-height: 36px;
+  font-size: calc( 14px + 16 * ((100vw - 320px) / 1600) );
+  line-height: calc( 16px + 20 * ((100vw - 320px) / 1600) );
 }
 .form__btn:hover {
   background-color: #fff;
@@ -775,6 +758,72 @@ body {
 .form__input:focus {
   -webkit-box-shadow: 0 0 15px #fff;
           box-shadow: 0 0 15px #fff;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.is-none {
+  display: none;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: calc( 0px + 70 * ((100vw - 320px) / 1600) );
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-img {
+  -webkit-box-shadow: 0px 0px 60px 18px #fff;
+          box-shadow: 0px 0px 60px 18px #fff;
+  border-radius: 26px;
+  margin-bottom: 60px;
+  max-width: 300px;
+}
+@media (max-width: 830px) {
+  .swiper-img {
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 40px 9px #fff;
+            box-shadow: 0px 0px 40px 9px #fff;
+  }
+}
+@media (max-width: 440px) {
+  .swiper-img {
+    max-width: 230px;
+  }
+}
+@media (max-width: 380px) {
+  .swiper-img {
+    max-width: 200px;
+  }
+}
+
+.swiper-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  padding: 10px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
