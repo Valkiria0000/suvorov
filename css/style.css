@@ -736,6 +736,8 @@ body {
   font-size: 25px;
   line-height: 30px;
   color: #000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .form__btn {
   padding: 8px 20px;
@@ -753,6 +755,8 @@ body {
 .form__btn:hover {
   background-color: #fff;
   color: #e73334;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .is-open {
@@ -762,6 +766,15 @@ body {
   transition: 0.5s;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.form * {
+  outline: none;
+}
+
+.form__input:focus {
+  -webkit-box-shadow: 0 0 15px #fff;
+          box-shadow: 0 0 15px #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

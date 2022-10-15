@@ -63,7 +63,7 @@
           личность неоспоримо божественная и необычайная. Суворов не проиграл ни
           одной битвы. Не начинал сражения без молитвы. Не убивал напрасно.
         </p>
-        <a class="section-right__link" href="#">Подробнее</a>
+        <a class="section-right__link" data-goto=".linkScroll" href="#">Подробнее</a>
       </div>
       <!-- /.content -->
 
@@ -237,7 +237,7 @@
       <!-- /.section-blur__wrapper -->
     </section>
 
-    <section class="section-right">
+    <section class="section-right linkScroll">
       <div class="section-right__image-wrapper wow slideInLeft"
       data-wow-duration="2s"
       data-wow-offset="350">
@@ -334,7 +334,7 @@
         <a class="footer__link" href="mailto:tamerlan5@mail.ru"
           >tamerlan5@mail.ru</a
         >
-        <a class="footer__link vk-link" href="#">
+        <a class="footer__link vk-link" href="https://vk.com/tatarovalery">
           <img src="img/vk.svg" alt=""
         /></a>
       </div>
@@ -346,9 +346,9 @@
         <!-- /.popup__btn -->
 
         <form class="form" action="" method="get">
-          <input class="form__input" type="text" placeholder="Фамилия" />
-          <input class="form__input" type="text" placeholder="Имя" />
-          <input class="form__input" type="text" placeholder="Номер телефона" />
+          <input class="form__input" type="text" name="name" placeholder="Фамилия" required/>
+          <input class="form__input" type="text" name="surname" placeholder="Имя" required />
+          <input class="form__input" type="text" name="phone" placeholder="Номер телефона" required />
           <button class="form__btn" type="submit">Отправить</button>
         </form>
       </div>
@@ -364,6 +364,7 @@
       new WOW().init();
     </script>
     <script src="js/popup.js"></script>
+    <script src="js/scroll.js"></script>
     <!-----------------------------------------------------------------------------добавление SWIPER-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 

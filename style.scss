@@ -585,6 +585,7 @@ body {
     font-size: 25px;
     line-height: 30px;
     color: $black;
+    transition: 0.5s;
   }
 
   &__btn {
@@ -602,6 +603,7 @@ body {
     &:hover {
       background-color: $white;
       color: $red;
+      transition: 0.8s;
     }
   }
 }
@@ -612,4 +614,11 @@ body {
 
   transition: 0.5s;
   transform: scale(1);
+}
+
+.form * {
+  outline: none;
+}
+.form__input:focus {
+  box-shadow: 0 0 15px $white;
 }
