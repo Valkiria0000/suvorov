@@ -125,6 +125,16 @@ body {
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
+@media (max-width: 830px) {
+  .main-page__link {
+    border-radius: 10px;
+  }
+}
+@media (max-width: 350px) {
+  .main-page__link {
+    width: 112px;
+  }
+}
 .main-page__crutch {
   width: 34px;
   display: inline-block;
@@ -211,15 +221,20 @@ body {
 }
 .section-right__title {
   font-weight: 700;
-  margin-bottom: 40px;
   font-size: calc( 15px + 17 * ((100vw - 320px) / 1600) );
   line-height: calc( 18px + 21 * ((100vw - 320px) / 1600) );
+  margin-bottom: calc( 20px + 20 * ((100vw - 320px) / 1600) );
 }
 .section-right__text {
   font-weight: 500;
   font-size: calc( 12px + 13 * ((100vw - 320px) / 1600) );
   line-height: calc( 15px + 15 * ((100vw - 320px) / 1600) );
   margin-bottom: calc( 20px + 30 * ((100vw - 320px) / 1600) );
+}
+@media (max-width: 830px) {
+  .section-right__text {
+    margin-bottom: 0;
+  }
 }
 .section-right__link {
   font-weight: 700;
@@ -229,6 +244,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 2px solid #fff;
   border-radius: 23px;
   text-decoration: none;
@@ -252,10 +270,17 @@ body {
     padding: 20px 30px;
   }
 }
+@media (max-width: 830px) {
+  .section-right__link {
+    border-radius: 10px;
+    margin-top: 40px;
+  }
+}
 @media (max-width: 440px) {
   .section-right__link {
-    padding: 6px;
+    width: 135px;
     font-weight: 500;
+    height: 43px;
   }
 }
 
@@ -393,15 +418,19 @@ body {
     padding: 20px 27px;
   }
 }
-@media (max-width: 440px) {
+@media (max-width: 830px) {
+  .section-left__link {
+    -ms-flex-item-align: center;
+        align-self: center;
+    border-radius: 4px;
+    width: 247px;
+  }
+}
+@media (max-width: 444px) {
   .section-left__link {
     padding: 10px;
     font-weight: 500;
-  }
-}
-@media (max-width: 350px) {
-  .section-left__link {
-    padding: 3px;
+    width: 175px;
   }
 }
 
@@ -824,6 +853,22 @@ body {
   line-height: 19px;
   text-align: center;
   padding: 10px 20px;
+}
+
+@media (max-width: 440px) {
+  .link-width {
+    width: 215px;
+  }
+}
+@media (max-width: 360px) {
+  .link-width {
+    width: 200px;
+  }
+}
+@media (max-width: 340px) {
+  .link-width {
+    width: 193px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
