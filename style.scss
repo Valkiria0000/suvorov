@@ -120,7 +120,7 @@ body {
     z-index: 3;
     box-shadow: 0px 0px 29px 16px $red;
     @include adaptiv("font-size", 45, 12, 0);
-    @include adaptiv("padding", 34, 12, 0);
+    @include adaptiv("padding", 34, 15, 0);
 
     &:hover {
       background-color: $white;
@@ -130,8 +130,9 @@ body {
     }
     @media (max-width: 830px) {
       border-radius: 10px;
+      width: 160px;
     }
-    @media (max-width: 350px) {
+    @media (max-width: 440px) {
       width: 112px;
     }
   }
