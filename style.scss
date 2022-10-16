@@ -648,6 +648,9 @@ body {
   justify-content: center;
   align-items: center;
   @include adaptiv("margin-top", 70, 0, 0);
+  @media (max-width: 830px) {
+    flex-shrink: 1;
+  }
 }
 
 .swiper-slide img {

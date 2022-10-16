@@ -814,6 +814,12 @@ body {
           align-items: center;
   margin-top: calc( 0px + 70 * ((100vw - 320px) / 1600) );
 }
+@media (max-width: 830px) {
+  .swiper-slide {
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+  }
+}
 
 .swiper-slide img {
   display: block;
