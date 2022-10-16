@@ -1,7 +1,5 @@
 function scrollLink() {
-  const menuLinks = document.querySelectorAll(
-    ".section-right__link[data-goto]"
-  );
+  const menuLinks = document.querySelectorAll(".link-scroll[data-goto]");
 
   menuLinks.forEach((menuLink) => {
     menuLink.addEventListener("click", onNavClick);

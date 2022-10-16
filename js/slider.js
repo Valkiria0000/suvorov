@@ -1,6 +1,4 @@
 function slider() {
-  const windowInnerWidth = window.innerWidth;
-
   if (window.matchMedia("screen and (max-width: 830px)").matches) {
     const staticBlock = document.querySelector(".section-gallary__container");
     const gallary = document.querySelector(".section-gallary");
